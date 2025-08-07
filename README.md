@@ -69,7 +69,7 @@ A real-time financial dashboard that tracks **budget vs actuals**, **cost varian
 
 ---
 
-## ⭐ Project Outcome (from Resume)
+## ⭐ Project Outcome
 > Reduced manual effort by 60% and improved budget visibility for financial teams by automating KPI tracking, reporting, and visual analysis.
 
 ---
