@@ -1,6 +1,6 @@
 # 💰 Financial KPI Tracker with Python & Excel Automation
 
-A real-time financial dashboard that tracks **budget vs actuals**, **cost variances**, and **monthly KPI performance** across departments using Python and Excel — visualized interactively in Google Colab.
+A real-time financial dashboard that tracks **budget vs actuals**, **cost variances**, and **monthly KPI performance** across departments using Python and Excel — visualized interactively in Google Colab. Now includes **automation scripts** to generate department-wise reports and simulate email automation.
 
 ---
 
@@ -12,6 +12,7 @@ A real-time financial dashboard that tracks **budget vs actuals**, **cost varian
 - ✅ KPI Summary (Total Budget, Total Actual, Avg Utilization)
 - ✅ Visuals via Plotly (Line + Bar Charts)
 - ✅ Google Colab Compatible (No local setup)
+- ✅ **Python Automation for Report Generation and Email Simulation**
 
 ---
 
@@ -23,9 +24,25 @@ A real-time financial dashboard that tracks **budget vs actuals**, **cost varian
 | **Plotly** | Interactive visualizations in Colab     |
 | **Excel**  | Data input and processing               |
 | **Google Colab** | Interactive Python dashboard       |
+| **smtplib (optional)** | Email automation (simulated) |
 
 ---
 
+## 📁 Project Structure
+```
+financial-kpi-tracker/
+├── data/
+│   └── processed_financial_kpis.xlsx         # Final cleaned KPI dataset
+├── notebook/
+│   └── Financial_KPI_Dashboard_Colab.ipynb   # Google Colab dashboard notebook
+├── automation/
+│   └── generate_monthly_reports.py           # Auto-export Excel reports by department
+│   └── simulate_email_summary.py             # Generates simulated summary email
+├── README.md                                 # Project overview and instructions
+└── LICENSE                                    # (optional) MIT License
+```
+
+---
 
 ## 📂 Dataset Example
 | Month   | Department | Budget (₹) | Actual (₹) | Variance (₹) | Variance (%) | % Utilization | Over Budget |
@@ -52,6 +69,20 @@ A real-time financial dashboard that tracks **budget vs actuals**, **cost varian
 
 ---
 
+## ⚙️ Automation Scripts
+
+### 1. 📁 generate_monthly_reports.py
+- Reads `processed_financial_kpis.xlsx`
+- Saves one Excel file **per department** with monthly KPI details
+
+### 2. 📧 simulate_email_summary.py
+- Summarizes monthly KPIs (total budget, actual, over-budget departments)
+- Prints the email content you'd send to stakeholders
+
+> Future: Can be connected to Gmail/Outlook using `smtplib` or `Google API`
+
+---
+
 ## ✅ Use Cases
 - Financial Analyst Dashboards
 - Departmental Budget Tracking
@@ -61,11 +92,16 @@ A real-time financial dashboard that tracks **budget vs actuals**, **cost varian
 ---
 
 ## 🔄 Future Improvements
-- Add email automation using `smtplib`
+- Add real email automation using `smtplib` or Gmail API
 - Push data to SQL and automate refresh
 - Build web dashboard with Streamlit or Dash
 - Connect to real-time Google Sheets API
+- Automate using `cron`, GitHub Actions, or Google Cloud
 
+---
+
+## 📜 License
+MIT License — feel free to use, modify, and share.
 
 ---
 
@@ -75,4 +111,5 @@ A real-time financial dashboard that tracks **budget vs actuals**, **cost varian
 ---
 
 **🔗 Star this repo if you found it helpful!**
+
 
